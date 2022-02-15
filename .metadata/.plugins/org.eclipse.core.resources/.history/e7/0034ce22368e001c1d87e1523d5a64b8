@@ -1,0 +1,7 @@
+package com.cy.Spring.lesson01.model;
+
+public class movie {
+	private int rate;
+	private String director;
+	private 
+}
