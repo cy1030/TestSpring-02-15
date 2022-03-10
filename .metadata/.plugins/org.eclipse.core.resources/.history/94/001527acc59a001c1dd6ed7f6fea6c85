@@ -1,0 +1,23 @@
+package com.cy.Spring.lesson06;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Lesson06Controller {
+	
+	@Autowired
+	private FavoriteBO favoriteBO;
+	
+	@GetMapping("/lesson06/favorite_list")
+	public String favoriteList() {
+		// 데이터 베이스 조회
+		
+		// 모델에 세팅
+		
+		// jsp 경로 리턴
+		
+	}
+}

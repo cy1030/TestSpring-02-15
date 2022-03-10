@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+	#duplicateText{
+		display: none;
+		color: red;
+	}
+
+</style>
+
+</head>
+<body>
+	
+	<div class="container">
+		
+		<h1>즐겨찾기 추가하기</h1>
+		
+		<label>제목</label>
+		<input type="text" class="form-control" id="nameInput"> <br>
+		<label>주소</label>
+		<input type="text" class="form-control" id="urlInput"> 
+		<button type="button" id="duplicateBtn">중복확인</button> <br>
+		<div id="duplicateText"> <small>중복된 url주소입니다.</small> </div>
+		
+		
+		<button type="button" class="btn btn-info btn-block" id="addBtn">추가</button>	
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+				$("#addBtn").on("click", function(){
+					let name = ${"#nameInput"}.val();
+					let url = ${"#urlInput"}.val();
+					
+					alert(name + "" + url);
+					// 유효성 검사
+					
+					// ajax를 통한 apl 호출
+					
+					// 성공여부에 따른 기능 
+					
+				});
+				
+				$("#duplicateBtn").on("click", function(){
+					
+					let name = ${"#nameInput"}.val();
+					let url = ${"urlInput"}.val();
+					
+					if(url == "") {
+						alert("주소를 입력하세요!");
+						return;	
+					}
+					
+					if(name == "") {
+						alert("이름을 입력하세요!");
+						return;	
+					}
+					
+					$ajax({
+						type:"get"
+						url:"/lesson06/is_duplicate",
+						data:{"url",url}
+						success:function(data){
+							if(data.is_duplicate){
+								
+							}
+						} error:function
+					})
+					
+					
+				});
+				
+		});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+	
+</body>
+</html>

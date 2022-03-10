@@ -1,0 +1,7 @@
+package com.cy.Spring.lesson06;
+
+public class Lesson06BookingController {
+	
+	public String BookingList
+	
+}

@@ -1,0 +1,15 @@
+package com.cy.Spring.lesson06.model;
+
+public class Booking {
+	
+	private int id;
+	private String name;
+	private int headcount;
+	private int day;
+	private String date;
+	private String phoneNumber;
+	private String state;
+	private Date createdAt;
+	private Date updatedAt;
+	
+}

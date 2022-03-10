@@ -1,0 +1,5 @@
+package com.cy.Spring.lesson06.bo;
+
+public class FavoriteBO {
+
+}

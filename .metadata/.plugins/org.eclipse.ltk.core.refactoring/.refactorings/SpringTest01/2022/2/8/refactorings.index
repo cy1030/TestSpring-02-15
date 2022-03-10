@@ -2,3 +2,16 @@
 1644910159887	Rename package 'com.cy.ex'
 1644910170480	Rename package 'com.cy.ex.hello'
 1644912884082	Rename type 'movie'
+1644993704270	Delete element
+1644993737216	Rename resource 'ex01.jsp'
+1644993967585	Delete element
+1644994257109	Delete element
+1645078803880	Rename package 'Mappers'
+1645078854873	Delete element
+1645079004856	Delete element
+1645085536291	Delete element
+1645086185078	Rename resource 'strore.xml'
+1645086193765	Rename resource 'EstateMappers.xml'
+1645087674356	Rename package 'config'
+1645087697044	Move compilation unit
+1645087700772	Delete element

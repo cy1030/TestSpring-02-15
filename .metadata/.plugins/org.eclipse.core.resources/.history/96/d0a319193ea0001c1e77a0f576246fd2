@@ -1,0 +1,17 @@
+package com.cy.Spring.lesson06.bo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cy.Spring.lesson06.dao.BookingDAO;
+
+@Service
+public class BookingBO {
+	
+	@Autowired
+	private BookingDAO bookingDAOl
+	
+	public List<Booking> getBookingList(){
+		
+	}
+}

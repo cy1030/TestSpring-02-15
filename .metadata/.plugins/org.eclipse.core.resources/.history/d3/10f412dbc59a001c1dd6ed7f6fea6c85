@@ -1,0 +1,30 @@
+package com.cy.Spring.lesson06;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.cy.Spring.lesson06.bo.FavoriteBO;
+import com.cy.Spring.lesson06.model.Favorite;
+
+@Controller
+public class Lesson06Controller {
+	
+	@Autowired
+	private FavoriteBO favoriteBO;
+	
+	@GetMapping("/lesson06/favorite_list")
+	public String favoriteList(Model model) {
+		// 데이터 베이스 조회
+		List<Favorite> favoriteList = favoriteBO.getFavoriteList();
+		
+		// 모델에 세팅
+		model.addAttribute("favoriteList", favoriteList)
+		
+		// jsp 경로 리턴
+		
+	}
+}
